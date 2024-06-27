@@ -1,0 +1,173 @@
+:root {
+    --hover-bg: #ffc45e;
+    --bg: #ffe45e;
+    --nav-bg: #333333;
+}
+
+html {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    background: var(--nav-bg);
+}
+
+.nav-base {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.one {
+    flex: 2;
+    justify-content: flex-start;
+}
+
+.two {
+    flex: 4;
+    justify-content: space-around;
+}
+
+.three {
+    flex: 3;
+    justify-content: flex-end;
+}
+
+.three li,
+.logo {
+    padding-inline: 1rem;
+}
+
+.logo img {
+    display: flex;
+    max-width: 2rem;
+    padding: 0.2rem;
+}
+
+.text,
+.nav-link,
+.menu {
+    color: var(--bg);
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-link {
+    padding-block: 1rem;
+    font-family: poppins, serif;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background 0.2s ease;
+}
+
+.nav-link:hover,
+.menu:hover {
+    background: var(--bg);
+    color: var(--nav-bg);
+    transform: translateY(0.2rem);
+}
+
+/* /* svg{
+    fill: var(--nav-bg);
+} */
+svg {
+    fill: inherit;
+}
+
+.btn-nav {
+    border-radius: 1rem;
+}
+
+.menu {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    scale: 0.6;
+    background: var(--bg);
+    color: var(--nav-bg);
+    fill: var(--nav-bg);
+    transition: 0.2s ease-out;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.menu:hover {
+    scale: 0.7
+}
+
+.three li {
+    flex: 0.2;
+}
+
+.clicked:hover {
+    background: var(--hover-bg);
+}
+
+.links {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .nav-link {
+        display: none;
+    }
+
+    .menu {
+        position: relative;
+        margin: 1rem;
+    }
+    html{
+        font-size: 13px;
+    }
+
+    .links {
+        transform: translateY(-9rem);
+        transition: translate 1s ease;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2rem;
+        transform: translateY(0);
+        background: #fff;
+        transition: 1s ease;
+        background: var(--bg);
+        padding: 1rem;
+    }
+    .menu-link{
+        display: flex;
+        padding: 0.3rem;
+        border-radius: 1rem;
+        font-family: poppins, serif;
+        text-align: center;
+    }
+    .menu-link:hover{
+        background: var(--hover-bg);
+        color: var(--bg);
+    }
+}
